@@ -79,14 +79,9 @@ function LandingPage() {
         getTickets(email,password);
         
       };
-     if (isAuthenticated === true) {
-       console.log(
-         "This is state context is auth ",
-         
-         isAuthenticated
-       );
-       return <Redirect to="/tickets" />;
-     }
+    if (isAuthenticated === true) {
+      return <Redirect to="/tickets" />;
+    }
       
 return (
     <Container component="main" maxWidth="xs">
