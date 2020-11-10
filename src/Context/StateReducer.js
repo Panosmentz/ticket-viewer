@@ -1,18 +1,12 @@
 export default (state, action) => {
-    switch (action.type) {
-      case "SET_TICKETS":
-        return {
-          ...state,
-          tickets: action.payload,
-          isAuthenticated:true,
-        };
-        case "LOAD_TICKETS":
-            return {
-              ...state,
-              tickets: action.payload,
-            };
-      default:
-        return state;
-    }
-  };
-  
+  switch (action.type) {
+    case "SET_TICKETS":
+      return {
+        ...state,
+        tickets: action.payload,
+        isAuthenticated: true,
+      };
+    default:
+      return state;
+  }
+};
