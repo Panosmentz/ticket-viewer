@@ -17,6 +17,8 @@ Clone the repository : `git clone https://github.com/Panosmentz/ticket-viewer-ze
 
 `cd ticket-viewer-zendesk`
 
+if you use .zip -> Extract here -> `cd ticket-viewer-zendesk-master`
+
 Install the dependencies:
 
 >`npm install`
