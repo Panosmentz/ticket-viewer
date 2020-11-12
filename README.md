@@ -13,7 +13,7 @@ Open a terminal
 Navigate into the new folder
 
 
-Clone the repository : git clone https://github.com/Panosmentz/ticket-viewer-zendesk.git OR download and extract ticket-viewer-zendesk-master.zip
+Clone the repository : `git clone https://github.com/Panosmentz/ticket-viewer-zendesk.git` OR download and extract ticket-viewer-zendesk-master.zip
 
 `cd ticket-viewer-zendesk`
 
