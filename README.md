@@ -6,15 +6,16 @@ Prerequisites : npm
 
 Create a new folder
 
-Navigate into the new folder
-
-Open your editor
+Open your code editor
 
 Open a terminal
 
-Clone the repository : git clone https://github.com/Panosmentz/ticket-viewer-zendesk.git
+Navigate into the new folder
 
-OR download and extract ticket-viewer-zendesk-master.zip
+
+Clone the repository : git clone https://github.com/Panosmentz/ticket-viewer-zendesk.git OR download and extract ticket-viewer-zendesk-master.zip
+
+`cd ticket-viewer-zendesk`
 
 Install the dependencies:
 
