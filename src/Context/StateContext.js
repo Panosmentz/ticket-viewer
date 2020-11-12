@@ -3,21 +3,25 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import StateReducer from "./StateReducer";
 
+//initial state of the App passed to useReducer
 const initialState = {
   tickets: {},
   isAuthenticated: false,
 };
 
-export const StateContext = createContext(initialState);
+export const StateContext = createContext(initialState); //create StateContext
 
+//create StateProvider. All App components(children) need to be wrapped around StateProvider to have access to StateContext
 export const StateProvider = ({ children }) => {
   const [state, dispatch] = useReducer(StateReducer, initialState);
 
+  // API Call, email and password get passed from LandingPage.js TextFields
+  // https://serene-gorge-83773.herokuapp.com/ bypass CORS
   async function getTickets(email, password) {
     try {
       const res = await axios({
         url:
-          "https://cors-anywhere.herokuapp.com/https://pmentzdev.zendesk.com/api/v2/tickets.json",
+          "https://serene-gorge-83773.herokuapp.com/https://pmentzdev.zendesk.com/api/v2/tickets.json",
         method: "get",
         headers: { "Content-Type": "application/json" },
         auth: {
@@ -26,11 +30,14 @@ export const StateProvider = ({ children }) => {
         },
       });
       dispatch({
+        //action dispatch to StateReducer.js
         type: "SET_TICKETS",
         payload: res.data.tickets,
       });
       if (res.status === 200) {
+        //API has returned tickets.json successfully
         toast.success("You have succesfuly been authenticated", {
+          //renders a succes Toast on succesfull API call
           position: "top-right",
           autoClose: 3000,
           hideProgressBar: false,
@@ -40,6 +47,7 @@ export const StateProvider = ({ children }) => {
           progress: undefined,
         });
       }
+      //Error handling
     } catch (err) {
       if (err.response) {
         if (err.response.status === 401) {
@@ -124,6 +132,7 @@ export const StateProvider = ({ children }) => {
   }
 
   return (
+    //Values that can be accessed from all Children components
     <StateContext.Provider
       value={{
         tickets: state.tickets,

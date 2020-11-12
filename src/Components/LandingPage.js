@@ -44,18 +44,19 @@ const useStyles = makeStyles((theme) => ({
 
 function LandingPage() {
   const classes = useStyles();
-  const { getTickets, isAuthenticated } = useContext(StateContext);
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const { email, password } = formData;
+  const { getTickets, isAuthenticated } = useContext(StateContext); //getTickets makes the API call, isAuthenticated is true only when the API call responds with 200 OK(user must be authenticated)
+  const [formData, setFormData] = useState({ email: "", password: "" }); //set the current state of email and password
+  const { email, password } = formData; //get email and password from formData to be passed on the getTickets function
 
   const onChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setFormData({ ...formData, [e.target.name]: e.target.value }); //monitor state changes when keys are entered in the textfields
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    getTickets(email, password);
+    getTickets(email, password); //API call
   };
   if (isAuthenticated === true) {
+    //true on action dispatch if API response status is 200
     return <Redirect to="/tickets" />;
   }
 

@@ -24,7 +24,7 @@ function Navbar() {
   let history = useHistory();
 
   function onClick() {
-    history.push("/");
+    history.push("/"); //redirects to home page
   }
 
   return (

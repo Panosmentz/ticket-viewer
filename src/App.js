@@ -1,13 +1,12 @@
 import React from "react";
 import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Navbar from "./Components/Navbar";
 import LandingPage from "./Components/LandingPage";
 import TicketsPage from "./Components/TicketsPage";
 import TicketInfoPage from "./Components/TicketInfoPage";
 import { StateProvider } from "./Context/StateContext";
-
-import "react-toastify/dist/ReactToastify.min.css";
 
 function App() {
   return (

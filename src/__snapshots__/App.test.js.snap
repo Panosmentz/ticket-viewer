@@ -1,0 +1,267 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots App snapshots 1`] = `
+<StateProvider>
+  <ToastContainer
+    autoClose={5000}
+    closeButton={[Function]}
+    closeOnClick={true}
+    draggable={true}
+    draggablePercent={80}
+    hideProgressBar={false}
+    newestOnTop={false}
+    pauseOnFocusLoss={true}
+    pauseOnHover={true}
+    position="top-right"
+    role="alert"
+    rtl={false}
+    transition={[Function]}
+  />
+  <BrowserRouter>
+    <Navbar />
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/tickets"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/tickets/:id"
+      />
+    </Switch>
+  </BrowserRouter>
+</StateProvider>
+`;
+
+exports[`snapshots Landing Page snapshots 1`] = `
+<WithStyles(ForwardRef(Container))
+  component="main"
+  maxWidth="xs"
+>
+  <WithStyles(CssBaseline) />
+  <div
+    className="makeStyles-paper-1"
+  >
+    <WithStyles(ForwardRef(Avatar))
+      className="makeStyles-avatar-2"
+    >
+      <LockOutlinedIcon />
+    </WithStyles(ForwardRef(Avatar))>
+    <WithStyles(ForwardRef(Typography))
+      component="h1"
+      variant="h5"
+    >
+      Authenticate
+    </WithStyles(ForwardRef(Typography))>
+    <form
+      className="makeStyles-form-3"
+      onSubmit={[Function]}
+    >
+      <WithStyles(ForwardRef(TextField))
+        autoComplete="email"
+        autoFocus={true}
+        className="makeStyles-textfield-5"
+        fullWidth={true}
+        id="email"
+        label="Email Address"
+        margin="normal"
+        name="email"
+        onChange={[Function]}
+        required={true}
+        type="email"
+        value=""
+        variant="outlined"
+      />
+      <WithStyles(ForwardRef(TextField))
+        autoComplete="current-password"
+        className="makeStyles-textfield-5"
+        fullWidth={true}
+        id="password"
+        label="Password"
+        margin="normal"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+        value=""
+        variant="outlined"
+      />
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-submitButton-4"
+        color="primary"
+        fullWidth={true}
+        type="submit"
+        variant="contained"
+      >
+        Authenticate
+      </WithStyles(ForwardRef(Button))>
+    </form>
+  </div>
+</WithStyles(ForwardRef(Container))>
+`;
+
+exports[`snapshots Navbar snapshots 1`] = `
+<div
+  className="makeStyles-root-6"
+>
+  <WithStyles(ForwardRef(AppBar))
+    className="makeStyles-appBar-7"
+    position="static"
+  >
+    <WithStyles(ForwardRef(Toolbar))>
+      <WithStyles(ForwardRef(IconButton))
+        aria-label="menu"
+        color="inherit"
+        edge="start"
+        onClick={[Function]}
+      >
+        <ViewWeekIcon />
+      </WithStyles(ForwardRef(IconButton))>
+      <WithStyles(ForwardRef(Typography))
+        className="makeStyles-title-8"
+        variant="h6"
+      >
+        Ticket Viewer
+      </WithStyles(ForwardRef(Typography))>
+    </WithStyles(ForwardRef(Toolbar))>
+  </WithStyles(ForwardRef(AppBar))>
+</div>
+`;
+
+exports[`snapshots Ticket Info Page snapshots 1`] = `
+<WithStyles(ForwardRef(Container))
+  component="main"
+  maxWidth="xs"
+>
+  <WithStyles(CssBaseline) />
+  <div
+    className="makeStyles-paper-1"
+  >
+    <WithStyles(ForwardRef(Avatar))
+      className="makeStyles-avatar-2"
+    >
+      <LockOutlinedIcon />
+    </WithStyles(ForwardRef(Avatar))>
+    <WithStyles(ForwardRef(Typography))
+      component="h1"
+      variant="h5"
+    >
+      Authenticate
+    </WithStyles(ForwardRef(Typography))>
+    <form
+      className="makeStyles-form-3"
+      onSubmit={[Function]}
+    >
+      <WithStyles(ForwardRef(TextField))
+        autoComplete="email"
+        autoFocus={true}
+        className="makeStyles-textfield-5"
+        fullWidth={true}
+        id="email"
+        label="Email Address"
+        margin="normal"
+        name="email"
+        onChange={[Function]}
+        required={true}
+        type="email"
+        value=""
+        variant="outlined"
+      />
+      <WithStyles(ForwardRef(TextField))
+        autoComplete="current-password"
+        className="makeStyles-textfield-5"
+        fullWidth={true}
+        id="password"
+        label="Password"
+        margin="normal"
+        name="password"
+        onChange={[Function]}
+        required={true}
+        type="password"
+        value=""
+        variant="outlined"
+      />
+      <WithStyles(ForwardRef(Button))
+        className="makeStyles-submitButton-4"
+        color="primary"
+        fullWidth={true}
+        type="submit"
+        variant="contained"
+      >
+        Authenticate
+      </WithStyles(ForwardRef(Button))>
+    </form>
+  </div>
+</WithStyles(ForwardRef(Container))>
+`;
+
+exports[`snapshots Tickets Page snapshots 1`] = `
+<WithStyles(ForwardRef(Grid))
+  className="makeStyles-root-9"
+>
+  <WithStyles(ForwardRef(TableContainer))
+    className="makeStyles-container-10"
+  >
+    <WithStyles(ForwardRef(Table))
+      aria-label="sticky table"
+      stickyHeader={true}
+    >
+      <WithStyles(ForwardRef(TableHead))>
+        <WithStyles(ForwardRef(TableRow))>
+          <WithStyles(ForwardRef(TableCell))
+            key="id"
+          >
+            ID
+          </WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(TableCell))
+            key="subject"
+          >
+            Subject
+          </WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(TableCell))
+            key="requester"
+          >
+            Requester
+          </WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(TableCell))
+            key="requesterupdated"
+          >
+            Requester updated
+          </WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(TableCell))
+            key="group"
+          >
+            Group
+          </WithStyles(ForwardRef(TableCell))>
+          <WithStyles(ForwardRef(TableCell))
+            key="assignee"
+          >
+            Assignee
+          </WithStyles(ForwardRef(TableCell))>
+        </WithStyles(ForwardRef(TableRow))>
+      </WithStyles(ForwardRef(TableHead))>
+      <WithStyles(ForwardRef(TableBody)) />
+    </WithStyles(ForwardRef(Table))>
+  </WithStyles(ForwardRef(TableContainer))>
+  <WithStyles(ForwardRef(TablePagination))
+    component="div"
+    count={0}
+    onChangePage={[Function]}
+    onChangeRowsPerPage={[Function]}
+    page={0}
+    rowsPerPage={25}
+    rowsPerPageOptions={
+      Array [
+        25,
+      ]
+    }
+  />
+</WithStyles(ForwardRef(Grid))>
+`;

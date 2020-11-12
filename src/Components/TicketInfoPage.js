@@ -64,9 +64,9 @@ const useStyles = makeStyles({
 function TicketInfoPage() {
   const classes = useStyles();
   let history = useHistory();
-  const { id } = useParams();
-  const { tickets } = useContext(StateContext);
-  const tbc = "TBC";
+  const { id } = useParams(); //useParams is used to "grab" the selected id from TicketsPage.js
+  const { tickets } = useContext(StateContext); //tickets object is stored in React's Context API and can be used from all Components
+  const tbc = "TBC"; //dummy text to be used when tickets.priority, tickets.type returned from the API are not defined
 
   const SendButton = () => (
     <IconButton>
@@ -75,9 +75,10 @@ function TicketInfoPage() {
   );
 
   function onClick() {
-    history.push("/tickets");
+    history.push("/tickets"); //redirects to /tickets
   }
 
+  //if the page is reloaded, React loses the current State and a new call to the API needs to be made. If the page is refreshed, we display a Skeleton loading component
   if (Object.keys(tickets).length === 0) {
     return (
       <div className={classes.root}>
@@ -118,6 +119,8 @@ function TicketInfoPage() {
       </div>
     );
   }
+
+  //page is not reloaded and access to tickets from StateContext is available, display ticket information
   return (
     <div className={classes.root}>
       <Grid
@@ -164,7 +167,7 @@ function TicketInfoPage() {
             />
             <Typography variant="h6" color="primary" className={classes.margin}>
               <PriorityHighIcon /> Priority :{" "}
-              {tickets[id - 1].priority ? (
+              {tickets[id - 1].priority ? ( //check if tickets[id-1].priority is defined and then renders it
                 <TextField
                   id="select-priority"
                   select
@@ -179,6 +182,7 @@ function TicketInfoPage() {
                   </MenuItem>
                 </TextField>
               ) : (
+                //tickets[id-1].priority is empty, render dummy "TBC"
                 <TextField
                   id="select-priority"
                   select
@@ -200,7 +204,7 @@ function TicketInfoPage() {
                 value={tickets[id - 1].status}
                 helperText="Change ticket status"
               >
-                {tickets[id - 1].status ? (
+                {tickets[id - 1].status ? ( //check if tickets[id-1].status is defined and then renders it
                   <MenuItem
                     key={tickets[id - 1].status}
                     value={tickets[id - 1].status}
@@ -208,6 +212,7 @@ function TicketInfoPage() {
                     {tickets[id - 1].status}
                   </MenuItem>
                 ) : (
+                  //tickets[id-1].status is empty, render dummy "TBC"
                   <MenuItem key={tbc} value={tbc}>
                     {tbc}
                   </MenuItem>
@@ -218,7 +223,7 @@ function TicketInfoPage() {
             <Typography variant="h6" color="primary" className={classes.margin}>
               <MergeTypeIcon />
               Type :{" "}
-              {tickets[id - 1].type ? (
+              {tickets[id - 1].type ? ( //check if tickets[id-1].type is defined and then renders it
                 <TextField
                   id="select-type"
                   select
@@ -233,6 +238,7 @@ function TicketInfoPage() {
                   </MenuItem>
                 </TextField>
               ) : (
+                //tickets[id-1].type is empty, renders dummy "TBC"
                 <TextField
                   id="select-type"
                   select
@@ -249,7 +255,7 @@ function TicketInfoPage() {
         </Grid>
         <Grid item xs={12} md={10}>
           <Paper className={classes.ticketPaper}>
-            <Typography variant="h4" color="primary" gutterBottom="true">
+            <Typography variant="h4" color="primary" gutterBottom={true}>
               {" "}
               <SubjectIcon /> {tickets[id - 1].subject}{" "}
             </Typography>

@@ -20,12 +20,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function StickyHeadTable() {
+function TicketsPage() {
   const classes = useStyles();
   let history = useHistory();
-  const { tickets } = useContext(StateContext);
+  const { tickets } = useContext(StateContext); //tickets object is stored in React's Context API and can be used from all Components
   const [page, setPage] = useState(0);
-  const [rowsPerPage, setRowsPerPage] = useState(25);
+  const [rowsPerPage, setRowsPerPage] = useState(25); //only display 25 tickets at each page
 
   const columns = [
     { id: "id", label: "ID" },
@@ -48,7 +48,7 @@ export default function StickyHeadTable() {
     },
   ];
 
-  const rows = [];
+  const rows = []; //define an array and populate it with data from the tickets Object
   for (let i = 0; i < tickets.length; i++) {
     rows.push({
       id: tickets[i].id,
@@ -72,11 +72,11 @@ export default function StickyHeadTable() {
   };
 
   const handleRowClick = (event) => {
-    history.push(`/tickets/${event}`);
+    history.push(`/tickets/${event}`); //if the row is clicked, redirect to /tickets/:id
   };
 
   return (
-    <Grid xs={12} className={classes.root}>
+    <Grid className={classes.root}>
       <TableContainer className={classes.container}>
         <Table stickyHeader aria-label="sticky table">
           <TableHead>
@@ -123,3 +123,5 @@ export default function StickyHeadTable() {
     </Grid>
   );
 }
+
+export default TicketsPage;
