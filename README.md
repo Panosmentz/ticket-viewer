@@ -10,7 +10,7 @@ Navigate into the new folder
 
 Open your editor
 
-Open a cmd and:
+Open a terminal
 
 Clone the repository : git clone https://github.com/Panosmentz/ticket-viewer-zendesk.git
 
