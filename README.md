@@ -30,12 +30,8 @@ Run the app:
 
 ### Notes
 
-While in development, the APP makes an API call with axios using a CORS bypass proxy(cors-anywhere) that I have deployed on heroku - `https://serene-gorge-83773.herokuapp.com/`
-Since I am only using one dyno on Heroku(free plan) the app goes to sleep after 1 hour of inactivity causing the API call to have
-a delay of 8-10 seconds if the app is asleep. After the first API call(Authenticate click), the app is "awake" with no additional delays.
-
-Another option is installing a chrome extension which can be found here : https://chrome.google.com/webstore/detail/moesif-origin-cors-change/digfbfaphojjndkpccljibejjbppifbc?hl=en
-If you use the extension make sure to change the API axios URL on src/Context/StateContext.js
+The APP makes an API call with axios using a CORS bypass proxy(cors-anywhere) that I have deployed on heroku - `https://serene-gorge-83773.herokuapp.com/`
+in order to authenticate the user. After the user is authenticated, a list of available tickets is displayed with more details.
 
 
 ## Screenshots
