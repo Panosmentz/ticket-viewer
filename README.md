@@ -10,7 +10,7 @@
 * [Contact](#contact)
 
 ## Overview
-> This is a ticket viewing App using the Zendesk API. The APP makes an API call with axios using a CORS bypass proxy(cors-anywhere) that I have deployed on heroku - https://serene-gorge-83773.herokuapp.com/ in order to authenticate the user. After the user is authenticated, a list of available tickets is displayed with more details.
+> The APP makes an API call with axios using a CORS bypass proxy(cors-anywhere) that I have deployed on heroku - https://serene-gorge-83773.herokuapp.com/ in order to authenticate the user. After the user is authenticated, a list of available tickets is displayed with more details.
 ## Screenshots
 ![LandingPage](https://github.com/Panosmentz/Projects-Screenshots/blob/master/ticket-viewer%20-%20screenshots/landingpage.PNG)
 ![LandingPageError](https://github.com/Panosmentz/Projects-Screenshots/blob/master/ticket-viewer%20-%20screenshots/landingpagerror.PNG)
